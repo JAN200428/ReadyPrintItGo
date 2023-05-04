@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload Form</title>
+  <style>
+    body {
+      background-color: #1E1F26;
+      color: #FFFFFF;
+    }
+    label {
+      font-size: 1.2rem;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+    }
+    select, input[type="submit"] {
+      padding: 5px 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      border: none;
+      background-color: #3F51B5;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #1E88E5;
+    }
+  </style>
+</head>
+<body>
+  <h1>File Upload Form</h1>
+  <form method="post" action="upload" enctype="multipart/form-data">
+    <label for="delivery">Delivery method:</label>
+    <select name="delivery">
+      <option value="pickup">Pickup</option>
+      <option value="building">Building and Room Number</option>
+    </select><br><br>
+    
+    <label for="payment">Payment method:</label>
+    <select name="payment">
+      <option value="cash">Cash</option>
+      <option value="gcash">GCash</option>
+      <option value="paymaya">PayMaya</option>
+    </select><br><br>
+
+    <label for="orientation">Orientation:</label>
+    <select name="orientation">
+      <option value="portrait">Portrait</option>
+      <option value="landscape">Landscape</option>
+    </select><br><br>
+
+    <label for="size">Size:</label>
+    <select name="size">
+      <option value="letter">Letter</option>
+      <option value="a4">A4</option>
+    </select><br><br>
+
+    <label for="file">Select file(s) to upload:</label>
+    <input type="file" name="file" multiple><br><br>
+    
+    <input type="submit" value="Upload">
+  </form>
+</body>
+</html>
